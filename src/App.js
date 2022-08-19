@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 
+const apiURL=process.env.REACT_APP_REACT_APP_APIURL;
 
 function App() {
   const [custId, setCustId] = useState('');
@@ -11,8 +12,8 @@ function App() {
     var requestOptions = {
       method: "GET",
     };
-    //var url = "http://localhost:3000/customer/id?cid=" + custId;
-    var url = "https://nus-backend.herokuapp.com/customer/id?cid=" + custId;
+    var url = apiURL+"customer/id?cid=" + custId;
+    //var url = "https://nus-backend.herokuapp.com/customer/id?cid=" + custId;
     console.log(url); 
     fetch(url, requestOptions)
       .then((response) => response.json())
@@ -24,8 +25,8 @@ function App() {
     var requestOptions = {
       method: "GET",
     };
-    //var url = "http://localhost:3000/customer/all";
-    var url = "https://nus-backend.herokuapp.com/customer/all";
+    var url = apiURL+"customer/all";
+    //var url = "https://nus-backend.herokuapp.com/customer/all";
     
     console.log(url);
     fetch(url, requestOptions)
