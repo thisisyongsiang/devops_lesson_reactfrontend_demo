@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 
-const apiURL=process.env.REACT_APP_REACT_APP_APIURL;
+const apiURL=process.env.REACT_APP_APIURL;
 
 function App() {
   const [custId, setCustId] = useState('');
